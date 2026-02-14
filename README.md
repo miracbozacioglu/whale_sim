@@ -35,9 +35,6 @@ Sistem, `/whale/cmd_vel` konusu (topic) üzerinden haberleşen **iki ana ROS 2 d
 
 
 
-
-
-
 ---
 
 <br>
@@ -61,13 +58,14 @@ Python: 3.10+
 📦 Python Kütüphaneleri
 
 sudo apt install python3-tk
+<br>
 pip3 install pynput
 
 <br>
 <br>
-<br>
----
 
+
+---
 🚀 Kurulum (Build)
 1️⃣ ROS 2 çalışma alanına girin
 cd ~/ros2_ws/src
@@ -87,8 +85,7 @@ source install/setup.bash
 
 <br>
 <br>
-<br>
----
+
 
 
 🎮 Çalıştırma
@@ -106,8 +103,7 @@ ros2 run whale_sim controller
 
 <br>
 <br>
-<br>
----
+
 
 📁 Dosya Yapısı
 
@@ -124,8 +120,6 @@ whale_sim/
 
 <br>
 <br>
-<br>
----
 
 🛠 Kullanılan Teknolojiler
 
@@ -141,8 +135,7 @@ geometry_msgs – Hız ve yön mesajları
 
 <br>
 <br>
-<br>
----
+
 
 👤 Yazar
 
