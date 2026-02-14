@@ -1,42 +1,126 @@
-# 🐋 ROS 2 Whale Sim
+# 🐋 ROS 2 Whale Sim  
+### Publisher & Subscriber Örneği
 
-**ROS 2 düğüm haberleşmesi (Node Communication) ve Pub/Sub mimarisini simüle eden, Python tabanlı görselleştirme projesi.**
+![ROS 2](https://img.shields.io/badge/ROS_2-Humble-blue?logo=ros&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-yellow?logo=python&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Bu proje, bir otonom sistemin temeli olan "kontrolcü" ve "görselleştirici" yapılarını basit bir örnekle açıklar. `whale_controller` düğümü klavye verilerini alır ve yayınlar (Publish), `whale_visualizer` düğümü ise bu verileri dinleyerek (Subscribe) `tkinter` arayüzündeki balinayı hareket ettirir.
+**ROS 2 düğüm haberleşmesi (Node Communication) ve Pub/Sub mimarisini simüle eden, Python tabanlı bir görselleştirme projesi.**
 
-![ROS 2 Badge](https://img.shields.io/badge/ROS%202-Humble-blue)
-![Language](https://img.shields.io/badge/Language-Python%203-yellow)
+Bu proje, otonom sistemlerin temelini oluşturan **mesajlaşma (Publisher / Subscriber)** mantığını kavramak amacıyla geliştirilmiştir.  
+Bir düğüm klavye girdilerini okuyarak veri yayınlar (**Publisher**), diğer düğüm ise bu verileri dinleyerek (**Subscriber**) ekrandaki balinayı hareket ettirir.
+
+---
 
 ## 📂 Proje Mimarisi
 
-Sistem iki ana düğümden oluşur:
+Sistem, `/whale/cmd_vel` konusu (topic) üzerinden haberleşen **iki ana ROS 2 düğümünden** oluşur:
 
-1.  **`whale_visualizer` (Subscriber):**
-    * Arayüzü oluşturur (Tkinter).
-    * `/whale/cmd_vel` konusunu dinler.
-    * Gelen hız verisine göre balinanın konumunu günceller.
-2.  **`whale_controller` (Publisher):**
-    * Klavye ok tuşlarını dinler (Pynput).
-    * Yön verilerini `geometry_msgs/Twist` mesajına çevirir.
-    * `/whale/cmd_vel` konusuna yayınlar.
+### 🟢 `whale_controller` (Publisher)
+- Ok tuşları ile klavye girdilerini dinler  
+- Girdileri `geometry_msgs/Twist` mesajına dönüştürür  
+- Hız ve yön bilgisini yayınlar  
 
-**Haberleşme Şeması:**
+### 🔵 `whale_visualizer` (Subscriber)
+- `/whale/cmd_vel` konusunu dinler  
+- Gelen hız bilgisine göre balinanın `(x, y)` konumunu günceller  
+- Hareketi `tkinter` GUI üzerinde görselleştirir  
+
+---
+
+## 🔄 Haberleşme Şeması
+
 ```mermaid
-[Klavye Girdisi] --> (whale_controller) --[/whale/cmd_vel]--> (whale_visualizer) --> [Grafik Arayüz]
+graph LR
+    A[Klavye Girdisi] --> B(whale_controller)
+    B -- /whale/cmd_vel (Twist) --> C(whale_visualizer)
+    C --> D[Ekranda Hareket]
 
-''''''
+
 
 ⚙️ Gereksinimler
-Bu projeyi çalıştırmak için aşağıdaki yazılımların yüklü olması gerekir:
 
-💡 Ubuntu 22.04 (veya uyumlu bir Linux dağıtımı)
+Projeyi çalıştırmadan önce aşağıdaki bileşenlerin kurulu olması gerekir:
 
-💡 ROS 2 Humble (veya Jazzy)
+🖥 Sistem
 
-💡 Python 3
+İşletim Sistemi: Ubuntu 22.04 LTS (veya uyumlu Linux)
+
+ROS Dağıtımı: ROS 2 Humble Hawksbill (Jazzy uyumlu)
+
+Python: 3.10+
+
+📦 Python Kütüphaneleri
+
+sudo apt install python3-tk
+pip3 install pynput
 
 
-'''''
+🚀 Kurulum (Build)
+1️⃣ ROS 2 çalışma alanına girin
+cd ~/ros2_ws/src
+
+
+2️⃣ Depoyu klonlayın
+https://github.com/miracbozacioglu/whale_sim.git
+
+
+3️⃣ Paketi derleyin
+cd ~/ros2_ws
+colcon build --packages-select whale_sim
+
+
+4️⃣ Ortamı kaynaklayın
+source install/setup.bash
+
+
+
+
+🎮 Çalıştırma
+
+Simülasyonu çalıştırmak için iki ayrı terminal açılmalıdır.
+
+🖥 Terminal 1 – Görselleştirici
+source ~/ros2_ws/install/setup.bash
+ros2 run whale_sim visualizer
+
+
+🎮 Terminal 2 – Kontrolcü
+source ~/ros2_ws/install/setup.bash
+ros2 run whale_sim controller
+
+
+📁 Dosya Yapısı
+
+whale_sim/
+├── resource/
+├── test/
+├── whale_sim/
+│   ├── __init__.py
+│   ├── whale_controller.py    # Klavye dinleyici düğümü
+│   └── whale_visualizer.py    # Grafik arayüz düğümü
+├── package.xml                # Paket bağımlılıkları
+├── setup.py                   # Kurulum ve entry point ayarları
+└── setup.cfg
+
+
+🛠 Kullanılan Teknolojiler
+
+ROS 2 (Robot Operating System) – Düğüm yönetimi & haberleşme
+
+rclpy – ROS 2 Python istemci kütüphanesi
+
+Tkinter – Grafik kullanıcı arayüzü
+
+Pynput – Klavye girdisi dinleme
+
+geometry_msgs – Hız ve yön mesajları
+
+👤 Yazar
+
+Miraç Bozacıoğlu
+📍  Bilgisayar Mühendisliği Öğrencisi
+
 
 
 
