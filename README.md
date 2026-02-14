@@ -30,11 +30,8 @@ Sistem, `/whale/cmd_vel` konusu (topic) üzerinden haberleşen **iki ana ROS 2 d
 
 ## 🔄 Haberleşme Şeması
 
-```mermaid
-graph LR
-    A[Klavye Girdisi] --> B(whale_controller)
-    B -- /whale/cmd_vel (Twist) --> C(whale_visualizer)
-    C --> D[Ekranda Hareket]
+<img width="4089" height="2560" alt="image" src="https://github.com/user-attachments/assets/30ba4e18-38f9-4c9b-8a41-3a208dcc7109" />
+
 
 
 
