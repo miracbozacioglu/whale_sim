@@ -46,6 +46,7 @@ Sistem, `/whale/cmd_vel` konusu (topic) üzerinden haberleşen **iki ana ROS 2 d
 ⚙️ Gereksinimler
 
 Projeyi çalıştırmadan önce aşağıdaki bileşenlerin kurulu olması gerekir:
+<br>
 
 🖥 Sistem
 
@@ -55,11 +56,17 @@ ROS Dağıtımı: ROS 2 Humble Hawksbill (Jazzy uyumlu)
 
 Python: 3.10+
 
+<br>
+
 📦 Python Kütüphaneleri
 
 sudo apt install python3-tk
 pip3 install pynput
 
+<br>
+<br>
+<br>
+---
 
 🚀 Kurulum (Build)
 1️⃣ ROS 2 çalışma alanına girin
@@ -78,7 +85,10 @@ colcon build --packages-select whale_sim
 4️⃣ Ortamı kaynaklayın
 source install/setup.bash
 
-
+<br>
+<br>
+<br>
+---
 
 
 🎮 Çalıştırma
@@ -94,6 +104,10 @@ ros2 run whale_sim visualizer
 source ~/ros2_ws/install/setup.bash
 ros2 run whale_sim controller
 
+<br>
+<br>
+<br>
+---
 
 📁 Dosya Yapısı
 
@@ -108,6 +122,10 @@ whale_sim/
 ├── setup.py                   # Kurulum ve entry point ayarları
 └── setup.cfg
 
+<br>
+<br>
+<br>
+---
 
 🛠 Kullanılan Teknolojiler
 
@@ -120,6 +138,11 @@ Tkinter – Grafik kullanıcı arayüzü
 Pynput – Klavye girdisi dinleme
 
 geometry_msgs – Hız ve yön mesajları
+
+<br>
+<br>
+<br>
+---
 
 👤 Yazar
 
