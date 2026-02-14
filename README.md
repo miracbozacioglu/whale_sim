@@ -47,19 +47,19 @@ Projeyi çalıştırmadan önce aşağıdaki bileşenlerin kurulu olması gereki
 
 🖥 Sistem
 
-İşletim Sistemi: Ubuntu 22.04 LTS (veya uyumlu Linux)
+🟢 İşletim Sistemi: Ubuntu 22.04 LTS (veya uyumlu Linux)
 
-ROS Dağıtımı: ROS 2 Humble Hawksbill (Jazzy uyumlu)
+🟢 ROS Dağıtımı: ROS 2 Humble Hawksbill (Jazzy uyumlu)
 
-Python: 3.10+
+🟢 Python: 3.10+
 
 <br>
 
 📦 Python Kütüphaneleri
 
-sudo apt install python3-tk
+🐋 sudo apt install python3-tk
 <br>
-pip3 install pynput
+🐋 pip3 install pynput
 
 <br>
 <br>
@@ -93,13 +93,13 @@ source install/setup.bash
 Simülasyonu çalıştırmak için iki ayrı terminal açılmalıdır.
 
 🖥 Terminal 1 – Görselleştirici
-source ~/ros2_ws/install/setup.bash
-ros2 run whale_sim visualizer
+🔵  source ~/ros2_ws/install/setup.bash
+🔵  ros2 run whale_sim visualizer
 
 
 🎮 Terminal 2 – Kontrolcü
-source ~/ros2_ws/install/setup.bash
-ros2 run whale_sim controller
+🔵  source ~/ros2_ws/install/setup.bash
+🔵  ros2 run whale_sim controller
 
 <br>
 <br>
@@ -107,16 +107,16 @@ ros2 run whale_sim controller
 ---
 📁 Dosya Yapısı
 
-whale_sim/
-├── resource/
-├── test/
-├── whale_sim/
-│   ├── __init__.py
-│   ├── whale_controller.py    # Klavye dinleyici düğümü
-│   └── whale_visualizer.py    # Grafik arayüz düğümü
-├── package.xml                # Paket bağımlılıkları
-├── setup.py                   # Kurulum ve entry point ayarları
-└── setup.cfg
+whale_sim/<br>
+├── resource/<br>
+├── test/<br>
+├── whale_sim/<br>
+│   ├── __init__.py<br>
+│   ├── whale_controller.py  <br>  # Klavye dinleyici düğümü
+│   └── whale_visualizer.py  <br> # Grafik arayüz düğümü
+├── package.xml      <br>          # Paket bağımlılıkları
+├── setup.py       <br>            # Kurulum ve entry point ayarları
+└── setup.cfg <br>
 
 <br>
 <br>
@@ -124,15 +124,15 @@ whale_sim/
 ---
 🛠 Kullanılan Teknolojiler
 
-ROS 2 (Robot Operating System) – Düğüm yönetimi & haberleşme
+🟢 ROS 2 (Robot Operating System) – Düğüm yönetimi & haberleşme
 
-rclpy – ROS 2 Python istemci kütüphanesi
+🟢 rclpy – ROS 2 Python istemci kütüphanesi
 
-Tkinter – Grafik kullanıcı arayüzü
+🟢 Tkinter – Grafik kullanıcı arayüzü
 
-Pynput – Klavye girdisi dinleme
+🟢 Pynput – Klavye girdisi dinleme
 
-geometry_msgs – Hız ve yön mesajları
+🟢 geometry_msgs – Hız ve yön mesajları
 
 <br>
 <br>
