@@ -29,8 +29,13 @@ Sistem, `/whale/cmd_vel` konusu (topic) üzerinden haberleşen **iki ana ROS 2 d
 ---
 
 ## 🔄 Haberleşme Şeması
+<img width="3849" height="1467" alt="Ekran Görüntüsü - 2026-02-14 12-02-35" src="https://github.com/user-attachments/assets/6f06a9d7-c0c7-4fb4-ac96-765528d584e0" />
 
 <img width="4089" height="2560" alt="image" src="https://github.com/user-attachments/assets/30ba4e18-38f9-4c9b-8a41-3a208dcc7109" />
+
+
+
+
 
 
 
