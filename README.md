@@ -87,7 +87,7 @@ source install/setup.bash
 <br>
 
 
-
+---
 🎮 Çalıştırma
 
 Simülasyonu çalıştırmak için iki ayrı terminal açılmalıdır.
@@ -104,7 +104,7 @@ ros2 run whale_sim controller
 <br>
 <br>
 
-
+---
 📁 Dosya Yapısı
 
 whale_sim/
@@ -121,6 +121,7 @@ whale_sim/
 <br>
 <br>
 
+---
 🛠 Kullanılan Teknolojiler
 
 ROS 2 (Robot Operating System) – Düğüm yönetimi & haberleşme
@@ -136,7 +137,7 @@ geometry_msgs – Hız ve yön mesajları
 <br>
 <br>
 
-
+---
 👤 Yazar
 
 Miraç Bozacıoğlu
