@@ -112,11 +112,11 @@ whale_sim/<br>
 ├── test/<br>
 ├── whale_sim/<br>
 │   ├── __init__.py<br>
-│   ├── whale_controller.py  <br>  # Klavye dinleyici düğümü
-│   └── whale_visualizer.py  <br> # Grafik arayüz düğümü
-├── package.xml      <br>          # Paket bağımlılıkları
-├── setup.py       <br>            # Kurulum ve entry point ayarları
-└── setup.cfg <br>
+│   ├── whale_controller.py  <br> 
+│   └── whale_visualizer.py  <br> 
+├── package.xml      <br>         
+├── setup.py       <br>            
+└── setup.cfg 
 
 <br>
 <br>
