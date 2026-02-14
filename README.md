@@ -40,6 +40,9 @@ Sistem, `/whale/cmd_vel` konusu (topic) üzerinden haberleşen **iki ana ROS 2 d
 
 ------
 
+<br>
+<br>
+
 ⚙️ Gereksinimler
 
 Projeyi çalıştırmadan önce aşağıdaki bileşenlerin kurulu olması gerekir:
