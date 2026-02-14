@@ -38,7 +38,7 @@ Sistem, `/whale/cmd_vel` konusu (topic) üzerinden haberleşen **iki ana ROS 2 d
 
 
 
-
+------
 
 ⚙️ Gereksinimler
 
