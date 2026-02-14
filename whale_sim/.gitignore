@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ROS 2 build artifacts (Eğer workspace içinde yanlışlıkla oluşursa)
+build/
+install/
+log/
+
+# VS Code settings
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
