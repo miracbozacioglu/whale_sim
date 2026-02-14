@@ -92,12 +92,12 @@ source install/setup.bash
 
 Simülasyonu çalıştırmak için iki ayrı terminal açılmalıdır.
 
-🖥 Terminal 1 – Görselleştirici
+🖥 Terminal 1 – Görselleştirici<br>
 🔵  source ~/ros2_ws/install/setup.bash <br>
 🔵  ros2 run whale_sim visualizer
 
 <br>
-🎮 Terminal 2 – Kontrolcü
+🎮 Terminal 2 – Kontrolcü<br>
 🔵  source ~/ros2_ws/install/setup.bash <br>
 🔵  ros2 run whale_sim controller
 
